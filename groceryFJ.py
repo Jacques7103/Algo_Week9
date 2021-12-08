@@ -1,11 +1,11 @@
 class ShoppingFJ:
-    def __init__(self, food = "Undefine", pound = 0, price = 0, total_food = 0):
+    def __init__(self, food = "Undefine", pound = 0, price = 0, total_food = 0): #Initialize
         self.__food = food
         self.__pound = pound
         self.__price = price
         self.__total_food = total_food
         
-    def __ItemListFJ(self):
+    def __ItemListFJ(self):     #Set the price for the food
         self.__food = self.__food.lower()
         if self.__food == "dry cured iberian ham":
             self.__price = 177.80
@@ -26,18 +26,18 @@ class ShoppingFJ:
         else:
             self.__price = 0.00
     
-    def get_Price(self):
+    def get_Price(self):        #Get the price of the food
         self.__ItemListFJ()
         return self.__price
             
-    def TotalFJ(self):
+    def TotalFJ(self):          #Calculating the total price for each food
         total_food = self.__pound * self.__price
         self.__total_food = total_food
         return self.__total_food
     
-    def __str__(self):
-        self.__price = item.__ItemListFJ()
-        return self.__price
+    # def __str__(self):
+    #     self.__price = item.__ItemListFJ()
+    #     return self.__price
         
 
 item = ShoppingFJ()
